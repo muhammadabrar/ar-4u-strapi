@@ -34,17 +34,17 @@
       "required": true
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "slug": {
       "pluginOptions": {
@@ -54,8 +54,7 @@
       },
       "type": "string",
       "unique": true,
-      "required": true,
-      "regex": "/^   [a-z0-9]+  (?: - [a-z0-9]+ )*  $/"
+      "required": true
     }
   }
 }
