@@ -24,16 +24,26 @@
       },
       "type": "string"
     },
-    "details": {
+    "slug": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks",
+      "type": "string",
+      "unique": true,
       "required": true
     },
-    "thumbnail": {
+    "blog_details": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    },
+    "Cover": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -46,15 +56,14 @@
         }
       }
     },
-    "slug": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
-      "unique": true,
-      "required": true
+      "type": "text",
+      "maxLength": 150
     }
   }
 }

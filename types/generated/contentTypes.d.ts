@@ -385,20 +385,6 @@ export interface ApiBlogBlog extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    details: Attribute.Blocks &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    thumbnail: Attribute.Media &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     slug: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
@@ -406,6 +392,29 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+      }>;
+    blog_details: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Cover: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMaxLength<{
+        maxLength: 150;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
