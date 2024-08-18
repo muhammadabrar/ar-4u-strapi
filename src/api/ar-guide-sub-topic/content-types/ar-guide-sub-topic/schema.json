@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ar_guide_sub_topics",
+  "info": {
+    "singularName": "ar-guide-sub-topic",
+    "pluralName": "ar-guide-sub-topics",
+    "displayName": "ar_guide_sub_topic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ar_guides": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ar-guide.ar-guide",
+      "mappedBy": "ar_guide_sub_topic"
+    },
+    "ar_guide_main_topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ar-guide-main-topic.ar-guide-main-topic",
+      "inversedBy": "ar_guide_sub_topics"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
